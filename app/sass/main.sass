@@ -2,78 +2,633 @@
 @import "vars"
 
 *
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
-	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
-		box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
 
 *::-webkit-input-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *:-moz-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *::-moz-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+  color: #666
+
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+  color: #666
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
-	margin: 0
-	padding: 0
-	border: 0
-	font-size: 100%
-	font: inherit
-	vertical-align: baseline
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
-	display: block
+  display: block
 
-ol, ul 
-	list-style: none
+ol, ul
+  list-style: none
 
 blockquote, q
-	quotes: none
+  quotes: none
 
 blockquote:before, blockquote:after, q:before, q:after
-	content: ''
-	content: none
+  content: ''
+  content: none
 
 table
-	border-collapse: collapse
-	border-spacing: 0
+  border-collapse: collapse
+  border-spacing: 0
 
 body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: normal
-	font-family: $default-font
-	overflow-x: hidden
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  overflow-x: hidden
+  color: #1A1A1A
 
 img
-	display: block
-	max-width: 100%
-	height: auto
+  display: block
+  max-width: 100%
+  height: auto
 
 .text-center
-	text-align: center
+  text-align: center
+
+a
+  display: block
+  transition: .3s ease
+  text-decoration: none
+  outline: none
+  &:hover, &:focus
+    text-decoration: none
+
+input
+  border: 2px solid #EDEDED
+  padding: 0 38px 0 19px
+  color: #1A1A1A
+  height: 50px
+  width: 100%
+  box-shadow: none
+  outline: none
+  font-size: 15px
+  font-family: 'gotham-m', sans-serif
+  box-sizing: border-box
+  &::placeholder
+    color: #1A1A1A
+  &:hover, &:focus
+    box-shadow: none
+    outline: none
 
 
-@import "media" // Всегда в конце
+h1
+  font-size: 32px
+  font-family: 'chocolates-b', sans-serif
+
+h2
+  font-size: 48px
+  font-family: 'chocolates-b', sans-serif
+  text-align: center
+  margin: 0 auto 40px
+
+.container
+  max-width: 1512px
+
+
+//button
+.btn-close
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 26px
+  height: 26px
+
+button, .btn
+  outline: none
+  box-shadow: none
+  border: none
+    radius: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+.btn-red
+  background: #E73A41
+  color: #fff
+  font-family: 'gotham-m', sans-serif
+
+.bg-grey-light
+  background: #F7F7F7
+
+.bg-red
+  background: #E73A41
+
+//button end
+
+.logo
+  width: 274px
+
+
+//top-banner
+.top-banner__content
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  position: relative
+  background: linear-gradient(0deg, #111F51, #111F51), #2C2C37
+  border-radius: 0 0 3px 3px
+  padding: 10px 4px 10px 30px
+  box-sizing: border-box
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -1px
+    width: 100%
+    height: 6px
+    background: url("../img/dots-line.svg") repeat-x center
+      size: contain
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: url("../img/bg1.png") no-repeat center
+      size: cover
+  .icon-arrow
+    width: 37px
+    height: 28.24px
+  .phone
+    font-size: 26px
+    color: #fff
+    font-family: 'chocolates-b', sans-serif
+  .icon-face
+    width: 41px
+    height: 41px
+  .icon-loc
+    width: 41px
+  .hand-icon
+    width: 85px
+  .btn-close
+    margin: -6px 0 auto 0
+  *
+    position: relative
+    z-index: 1
+
+.top-banner__title
+  font-size: 28px
+  font-weight: bold
+  font-family: 'chocolates-b', sans-serif
+  color: #fff
+  span
+    position: relative
+    color: #A6D361
+    &:before, &:after
+      content: ''
+      position: absolute
+      bottom: -9px
+    &:after
+      width: 109px
+      height: 7px
+      background: url("../img/line1.png") no-repeat left center
+        size: contain
+      left: -13px
+      bottom: -5px
+    &:before
+      right: -10px
+      width: 199.19px
+      height: 15px
+      background: url("../img/line2.png") no-repeat right center
+        size: contain
+
+//top-banner end
+
+//main menu
+.main-menu
+  width: 100%
+  display: flex
+  align-items: flex-end
+  justify-content: space-between
+  flex-wrap: wrap
+  padding: 10px 0
+  .navbar-nav
+    .nav-item
+      margin: 0 72px 0 0
+      &:last-child
+        margin: 0
+    .nav-link
+      padding: 0
+      color: #000
+      font-family: 'gotham-l', sans-serif
+      &:hover
+        color: #A6D361
+
+.navbar
+  padding: 0
+
+
+
+.links-sale
+  display: flex
+  align-items: flex-end
+  color: #000
+  .text
+    margin: 0 0 0 15px
+//main menu end
+
+
+//header-center__content
+.header-center__content
+  width: 100%
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: flex-end
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 300px
+    top: 0
+    width: 2086px
+    height: 1px
+    background: #EDEDED
+  .btn-sell
+    margin: 0 10px
+  .btn-phone
+    margin: 0 38px 0 auto
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      right: -19px
+      transform: translate(0,-50%)
+      width: 2px
+      height: 33px
+      background: #D9D9D9
+      opacity: .34
+  .box-schedule
+    margin: 0 0 0 26px
+
+
+.block-advantages
+  display: flex
+  align-items: center
+  margin: 0 4px 0 22px
+  p
+    max-width: 168px
+    font-family: 'chocolates-r', sans-serif
+    line-height: 17px
+  .icon
+    width: 36px
+    margin: 0 12px 0 0
+
+.box-schedule
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-start
+
+  p
+    font-size: 18px
+    font-family: 'chocolates-r', sans-serif
+    color: #A6A6A6
+    span
+      margin: 0 0 0 12px
+  .phone
+    font-size: 26px
+    font-family: 'chocolates-r', sans-serif
+    color: #000
+    span
+      color: #0A2896
+
+.btn-phone
+  width: 49px
+  height: 49px
+  display: flex
+  align-items: center
+  justify-content: center
+  background: linear-gradient(0deg, #E6F2FD, #E6F2FD), linear-gradient(0deg, #CFCEE9, #CFCEE9), #3A9AF3
+  border-radius: 2px
+
+.btn-help
+  width: 155px
+  height: 49px
+  border-radius: 2px
+
+.btn-sell
+  width: 198px
+  height: 49px
+  color: #0A2896
+  border-radius: 2px
+  font-family: 'gotham-m', sans-serif
+
+.btn-favorites
+  width: 78px
+  height: 49px
+  border-radius: 2px
+  color: #E73A41
+  font-family: 'gotham-m', sans-serif
+  .text
+    margin: 0 0 0 12px
+
+
+//header-center__content end
+
+//header-bottom__content
+.header-bottom__content
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 29px 0
+
+.nav-menu
+  width: 100%
+
+.header-menu
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  width: 100%
+  li
+    margin: 0 2px 0 0
+    flex: auto
+    &:last-child
+      margin: 0
+
+.nav-item__name
+  font-size: 15px
+  color: #fff
+  font-family: 'gotham-m', sans-serif
+  background: #0A2896
+  padding: 15px
+  cursor: pointer
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+.block-search
+  margin: 0 0 0 9px
+  .form-search
+    display: flex
+    align-items: center
+    position: relative
+    width: 234px
+    label
+      width: 100%
+    button
+      padding: 0
+      margin: 0
+      position: absolute
+      right: 21px
+      top: 50%
+      transform: translate(0,-50%)
+      width: 16px
+      height: 16px
+//header-bottom__content end
+
+//main
+.list-info-total
+  display: flex
+  align-items: center
+  li
+    margin: 0 35px 0 0
+    padding: 0 35px 0 0
+    position: relative
+    display: flex
+    align-items: flex-end
+    color: #6E6E6E
+    font-size: 20px
+    font-family: 'chocolates-r', sans-serif
+    line-height: 16px
+    p
+      padding: 0 0 0 9px
+    &:before
+      content: ''
+      height: 24px
+      width: 1px
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translate(0,-50%) rotate(35deg)
+      background: #A6A6A6
+    &:last-child
+      margin: 0
+      padding: 0
+      &:before
+        display: none
+
+//main end
+
+//main-category
+.main-category
+  margin: 32px -15px 0
+
+.category-box
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  width: 100%
+  height: 230px
+  background: #C4C4C4
+  .image
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  button
+    position: absolute
+    bottom: 0
+    left: 0
+    background: #fff
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 5px 30px
+    height: 54px
+    .text
+      font-size: 24px
+      color: #000
+      line-height: 23px
+      font-family: 'chocolates-b', sans-serif
+      padding: 0 20px 0 0
+      text-align: left
+      display: inline-block
+    .quantity
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      color: #ffffff
+      width: 32px
+      height: 32px
+      min-width: 32px
+      font-size: 14px
+      font-family: 'chocolates-b', sans-serif
+    &:hover
+      background: #fff
+
+.category-box-max
+
+  button
+    width: 405px
+
+.category-box-min
+  width: 360px
+  button
+    width: 263px
+
+.main-category-wrapper
+  display: flex
+  flex-wrap: wrap
+
+.menu-variant
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 53px 0 62px
+  li
+    flex: auto
+    border-right: 1px solid #A6A6A6
+    &:last-child
+      border: none
+    a
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      color: #000
+      font-size: 24px
+      font-family: 'chocolates-r', sans-serif
+      &:hover
+        color: #E73A41
+
+
+//stages-business
+.stages-business
+  margin: 31px 0 100px
+
+.stages-business__content
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+
+.stages-business__box
+  position: relative
+  width: 322px
+  height: 218px
+  margin: 0 0 55px
+  .stages-business__box-wrapper
+    position: relative
+    width: 100%
+    height: 100%
+    overflow: hidden
+    border: 1px solid #D9D9D9
+    padding: 20px 43px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    background: #fff
+    box-sizing: border-box
+    text-align: center
+  span, p
+    display: block
+    position: relative
+    z-index: 1
+    font-size: 24px
+    line-height: 23px
+    font-family: 'chocolates-b', sans-serif
+  span
+    margin: 20px auto 0
+    color: #0A2896
+  .number
+    position: absolute
+    right: -59px
+    bottom: 0
+    font-size: 330px
+    line-height: 210px
+    color: #F7F7F7
+    font-family: 'chocolates-b', sans-serif
+    display: flex
+    align-items: center
+    justify-content: flex-start
+  h3
+    font-size: 32px
+    line-height: 31px
+    color: #1A1A1A
+    font-family: 'chocolates-b', sans-serif
+    margin: 0 auto 21px
+    position: relative
+    z-index: 1
+  p
+    span
+      margin: 0
+  button
+    color: #E73A41
+    border-bottom: 1px solid #CFCEE9
+    font-size: 24px
+    font-family: 'chocolates-b', sans-serif
+    line-height: 23px
+
+
+.stages-business__box-max
+  width: 441px
+  margin: 0 22px 55px auto
+  .stages-business__box-wrapper
+    padding: 20px 57px
+  .img
+    position: absolute
+    right: -11px
+    bottom: -16px
+  &:last-child
+    margin: 0 auto 55px 22px
+
+
+@import "media"
+// Всегда в конце
