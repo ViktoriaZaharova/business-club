@@ -25,4 +25,11 @@ $(document).ready(function() {
         e.preventDefault();
        $('.top-banner').fadeOut();
     });
+
+    $('.license-slider').slick({
+        slidesToShow: 2,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        infinite: false
+    });
 });

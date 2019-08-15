@@ -312,6 +312,9 @@
   .start-work
     margin: 0 0 42px
 
+  .employees-profile__license .slide
+    width: 95%
+
 @media only screen and (max-width : 1370px)
   .container
     max-width: 1296px
@@ -634,7 +637,15 @@
       &:nth-child(2)
         max-width: 170px
 
+  .employees__box-wrapper h3
+    font-size: 20px
 
+  .employees__box-wrapper .contacts-item
+    margin: 14px 0
+
+  .employees-profile__description h1
+    font-size: 26px
+    line-height: normal
 
 @media only screen and (max-width : 1199px)
   main
@@ -651,6 +662,26 @@
 
   .services:before
     height: 637px
+
+  .control-wrapper
+    position: relative
+    flex-direction: row
+    align-items: center
+    top: 0
+    right: 0
+    left: 0
+    margin: 0 0 0 auto
+    a
+      margin: 0 20px 0 0
+      &:last-child
+        margin: 0
+    .article-arrow
+      flex-direction: row
+      align-items: center
+      a
+        margin: 0 20px 0 0
+
+
 
 @media only screen and (max-width : 1180px)
   .top-banner
@@ -780,6 +811,19 @@
 
   .list-question li
     margin: 0 0 29px
+
+  .employees-profile__license
+    margin: 30px 0 0 0
+
+  .license-slider .slick-next
+    right: 0
+
+  .license-slider .slick-prev
+    left: 0
+
+  .employees-profile__license .slide
+    width: 100%
+    margin: 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 970px)
@@ -1521,6 +1565,27 @@
       svg
         width: 100%
 
+  .employees-profile__description
+    margin: 30px 0 0
+
+  .employees-profile__photo
+    height: auto
+
+  .table td, .table th
+    padding: 14px 10px
+
+  .table-responsive .description-text
+    padding: 15px 10px 40px
+
+  .article-arrow .arrow-prev, .article-arrow .arrow-next, .share-btn
+    width: 40px
+    height: 40px
+    svg
+      width: 15px
+
+  .article-arrow .arrow-prev, .article-arrow .arrow-next
+    margin: 0 15px 0 0
+
 @media only screen and (max-width : 520px)
   .header-top .box-schedule
     display: none
@@ -1689,6 +1754,13 @@
       margin: 0 auto 19px
       max-width: 255px
 
+  .news-page__content .date
+    align-items: center
+    .control-wrapper
+      margin: 10px 0 0
+      justify-content: center
+      width: 100%
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 420px)
@@ -1708,33 +1780,10 @@
     right: 0
     top: 115px
 
+  .employees-profile__license .slide
+    width: 90%
+
+
 @media only screen and (max-width : 320px)
-	/**/
-
-
-/*==========  Mobile First  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
 	/**/
 
