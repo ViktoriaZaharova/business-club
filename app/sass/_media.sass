@@ -315,6 +315,33 @@
   .employees-profile__license .slide
     width: 95%
 
+  .question-box h3
+    padding: 0 30px 20px
+    font-size: 18px
+
+  .question-box .text
+    padding: 20px 30px 10px
+    font-size: 14px
+
+  .question-box
+    padding: 30px 0
+    button
+      margin: auto 20px 0
+
+  .filter-wrapper__top .block-search .form-search
+    width: 50px
+    height: 50px
+    input
+      color: transparent
+      padding: 0
+      &::placeholder
+        color: transparent
+
+  .filter-wrapper__top .block-search .form-search button
+    right: auto
+    left: 50%
+    transform: translate(-50%,-50%)
+
 @media only screen and (max-width : 1370px)
   .container
     max-width: 1296px
@@ -824,6 +851,18 @@
   .employees-profile__license .slide
     width: 100%
     margin: 0
+
+  .question-modal .bg-red
+    right: 10px
+    top: 10px
+
+  .question-modal .question-text p
+    margin: 0 0 15px
+    font-size: 16px
+    line-height: 24px
+
+  .contacts-section__box-wrapper
+    margin: 0 0 30px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 970px)
@@ -1585,6 +1624,43 @@
 
   .article-arrow .arrow-prev, .article-arrow .arrow-next
     margin: 0 15px 0 0
+
+  .question-box
+    height: auto
+    button
+      margin: 20px 20px 0
+
+  .contacts-section__box-wrapper .form-callback .description
+    flex-direction: column
+    button
+      order: 1
+      width: 100%
+      margin: 20px auto 0
+    p
+      text-align: center
+      font-size: 16px
+
+  .contacts-section__box-wrapper .form-callback .form-group
+    width: 100%
+
+  .contacts-section__box-text
+    padding: 20px 20px 15px
+
+  .contacts-section .address, .contacts-section .mail, .contacts-section .phone-wrapper
+    font-size: 16px
+
+  .contacts-section .schedule
+    font-size: 18px
+
+  .contacts-section__box-wrapper .logo
+    width: 100%
+    height: auto
+
+  .contacts-section__box-wrapper .list-disc li
+    margin: 0 0 15px
+
+  .contacts-section__box-wrapper .start-work
+    margin: 0 0 20px
 
 @media only screen and (max-width : 520px)
   .header-top .box-schedule

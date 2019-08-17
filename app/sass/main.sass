@@ -29,11 +29,11 @@
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-  color: #666
+  color: #0A2896
 
 body input:required:valid,
 body textarea:required:valid
-  color: #666
+  color: #0A2896
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
   margin: 0
@@ -106,6 +106,12 @@ input
     box-shadow: none
     outline: none
 
+textarea
+  outline: none
+  &:hover, &:focus
+    outline: none
+    color: #0A2896
+
 
 h1
   font-size: 32px
@@ -140,7 +146,7 @@ h2
   width: 26px
   height: 26px
 
-button, .btn
+button, .btn, .btn-primary
   background: transparent
   padding: 0
   outline: none
@@ -191,6 +197,19 @@ button, .btn
   &:hover
     color: #fff
     background: #E73A41
+
+.btn-blue-light
+  border: none
+    radius: 0
+  font-size: 16px
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1)
+  background: linear-gradient(0deg, #E6F2FD, #E6F2FD), linear-gradient(0deg, #CFCEE9, #CFCEE9), #3A9AF3
+  color: #0A2896
+  font-family: 'chocolates-r', sans-serif
+  &:hover
+    background: #0A2896
+    color: #fff
+
 
 .btn-links
   color: #0A2896
@@ -568,7 +587,7 @@ button, .btn
     width: 224px
     height: 54px
 
-.nav-item.on
+.dropdown.on
   z-index: 11
 
 .nav-item__name
@@ -1819,6 +1838,27 @@ footer
 .content
   box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.05)
   padding: 30px 0 80px
+  .services
+    padding: 0
+    margin: 120px 0 30px
+    &:before
+      display: none
+    h2
+      color: #1A1A1A
+      margin: 0 0 29px
+  .advantages
+    background: transparent
+    position: relative
+    padding: 83px 0 0
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      background: #FAFAFA
+      height: 689px
+
 
 //breadcrumb
 .nav-breadcrumb
@@ -2124,14 +2164,21 @@ footer
   font-family: 'chocolates-r', sans-serif
   font-size: 20px
   margin: 0 0 30px
+  position: relative
   .photo
     position: relative
     width: 100%
     display: flex
-    align-items: center
+    align-items: flex-start
     justify-content: center
     overflow: hidden
     height: 261px
+    .img
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
     img
       width: 100%
       height: 100%
@@ -2147,6 +2194,100 @@ footer
     margin: 0 0 14px
     font-size: 20px
     color: #1A1A1A
+  .links
+    width: 33px
+    height: 16px
+    opacity: 0
+    visibility: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    right: 33px
+    bottom: 20px
+    svg
+      width: 100%
+      height: 100%
+  &:hover
+    .links
+      opacity: 1
+      visibility: visible
+    .photo-slider
+      opacity: 1
+      visibility: visible
+    .photo
+      .img
+        opacity: 0
+        visibility: hidden
+  .photo-slider
+    transition: .3s ease
+    width: 100%
+    margin: 0
+    opacity: 0
+    visibility: hidden
+    .slide
+      height: 246px
+      overflow: hidden
+  .slick-dots
+    position: relative
+    bottom: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 11px 0 0
+    li
+      width: 91px
+      height: 4px
+      margin: 0 4px
+      background: #D9D9D9
+      position: relative
+      z-index: 3
+      button
+        display: none
+    li.slick-active
+      background: #E73A41
+
+.object-subscribe
+  font-family: 'chocolates-r', sans-serif
+  width: 100%
+  .title
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 0 28px
+    h3
+      margin: 0 0 0 20px
+      color: #0A2896
+      font-size: 24px
+      font-family: 'chocolates-b', sans-serif
+  .text-box
+    font-size: 18px
+    color: #808080
+    line-height: 20px
+    h6
+      margin: 30px 0 0
+  .btn-blue-light
+    margin: 21px 0 0
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1)
+    width: 147px
+    height: 40px
+
+
+.btn-subscribe
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 0 0 45px
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+  background: #fff
+  border: 1px solid #D9D9D9
+  box-sizing: border-box
+  padding: 0 31px 0 29px
+  height: 64px
+  font-size: 19px
+  font-family: 'chocolates-b', sans-serif
+  color: #000
 
 .square
   display: flex
@@ -2404,6 +2545,813 @@ footer
       margin: 0
     .links
       padding: 0
+
+
+//question-section
+.question-box
+  width: 100%
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.088)
+  background: #fff
+  border: 1px solid #EDEDED
+  box-sizing: border-box
+  height: 363px
+  padding: 40px 0
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  margin: 0 0 30px
+  font-family: 'chocolates-r', sans-serif
+  h3
+    padding: 0 40px 30px
+    box-sizing: border-box
+    color: #1A1A1A
+    font-family: 'chocolates-b', sans-serif
+    font-size: 24px
+    border-bottom: 1px solid #EDEDED
+  .text
+    padding: 30px 30px 20px 40px
+    font-size: 18px
+  button
+    margin: auto 40px 0
+    width: 185px
+    height: 40px
+
+.question-modal
+  .bg-red
+    background: #E73A41
+    top: 0
+    right: -44px
+  .modal-dialog
+    max-width: 768px
+  .modal-header
+    padding: 40px 40px 0
+  .modal-title
+    font-size: 32px
+    font-family: 'chocolates-b', sans-serif
+  .modal-body
+    padding: 20px 40px
+  .question-text
+    letter-spacing: 0.02em
+    font-size: 20px
+    font-family: 'chocolates-r', sans-serif
+    line-height: 30px
+    p
+      margin: 0 0 30px
+
+
+//contacts section
+.contacts-section
+  .maps
+    width: 100%
+    height: 274px
+  .schedule
+    display: flex
+    align-items: center
+    font-size: 24px
+    font-family: 'chocolates-b', sans-serif
+    span
+      margin: 0 0 0 30px
+      color: #A6A6A6
+  .address
+    margin: 26px 0 15px
+    display: flex
+    align-items: center
+    font-size: 20px
+    .icon
+      width: 12px
+      height: 16px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 0 16px 0 0
+  .phone-wrapper
+    display: flex
+    align-items: center
+    font-size: 20px
+    .icon
+      width: 20px
+      height: 15px
+      margin: 0 12px 0 0
+      display: flex
+      align-items: center
+      justify-content: center
+    a
+      color: #1A1A1A
+      margin: 0 10px 0 0
+      &:last-child
+        margin: 0
+  .mail
+    font-size: 20px
+    display: flex
+    align-items: center
+    margin: 15px 0 26px
+    font-family: 'chocolates-r', sans-serif
+    .icon
+      margin: 0 12px 0 0
+      width: 20px
+      height: 15px
+    .text
+      text-decoration: underline
+      color: #1A1A1A
+
+
+
+.contacts-section__box-wrapper
+  font-family: 'chocolates-r', sans-serif
+  h3
+    font-size: 24px
+    font-family: 'chocolates-b', sans-serif
+  h4
+    font-family: 'chocolates-b', sans-serif
+    font-size: 18px
+  .logo
+    width: 447px
+    height: 121px
+    margin: 0 0 33px
+    svg
+      width: 100%
+      height: 100%
+  .start-work
+    margin: 0 0 46px
+    font-size: 17px
+    color: #1A1A1A
+    font-family: 'chocolates-r', sans-serif
+    align-items: flex-start
+    .icon
+      margin: 0 11px 0 0
+      width: 24px
+      height: 31px
+      min-width: 24px
+      .star
+        stroke: #0A2896
+  .list-disc
+    li
+      margin: 0 0 30px
+      font-size: 18px
+      &:last-child
+        margin: 0
+  .form-callback
+    width: 100%
+    margin: 24px 0 0 0
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    .form-group.form-group-message
+      width: 100%
+      margin: 0 0 22px
+      .close-label
+        transform: translate(0)
+        top: 19px
+    .form-group
+      width: 47%
+      margin: 0 0 29px
+    .text-label
+      display: flex
+      align-items: center
+      font-size: 18px
+      margin: 0 0 9px
+    input
+      width: 100%
+      box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.136)
+      border-radius: 0
+      border: 1px solid #D9D9D9
+      background: #fff
+      height: 50px
+      text-align: left
+      font-size: 15px
+      padding: 0 40px 0 20px
+      box-sizing: border-box
+      color: #A6A6A6
+      font-family: 'gotham-m', sans-serif
+      &::placeholder
+        color: #A6A6A6
+    textarea
+      width: 100%
+      box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.136)
+      border-radius: 0
+      border: 1px solid #D9D9D9
+      background: #fff
+      height: 130px
+      padding: 17px 40px 17px 20px
+      color: #A6A6A6
+      font-family: 'gotham-m', sans-serif
+      &::placeholder
+        color: #A6A6A6
+    label
+      position: relative
+      width: 100%
+      margin: 0
+    .close-label
+      position: absolute
+      right: 20px
+      top: 50%
+      transform: translate(0,-50%)
+      width: 12px
+      height: 12px
+      display: flex
+      align-items: center
+      justify-content: center
+      svg
+        width: 100%
+        height: 100%
+    .star
+      font-size: 18px
+      color: #E73A41
+    .description
+      width: 100%
+      margin: 0
+      display: flex
+      align-items: center
+      button
+        width: 264px
+        height: 60px
+        margin: 0 18px 0 0
+        font-size: 16px
+      p
+        text-align: left
+        font-size: 18px
+
+.necessarily
+  display: flex
+  font-size: 18px
+  align-items: center
+  margin: 0 0 26px
+  .star
+    margin: 0 5px 0 0
+
+
+.contacts-section__box
+  background: #fff
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.088)
+  box-sizing: border-box
+  border: 1px solid #EDEDED
+  margin: 0 0 64px
+
+
+.contacts-section__box-text
+  padding: 40px 40px 15px
+
+
+
+//filter
+.filter-box
+  position: relative
+  .dropdown-menu
+    z-index: 3
+  .dropdown.on
+    .icon-arrow
+      transform: rotate(0)
+    button
+      background: #0A2896
+      color: #fff
+      border-color: #0A2896
+      .icon-arrow
+        svg
+          path
+            stroke: #fff
+  .dropdown
+    //position: relative
+    position: inherit
+    button
+      height: 50px
+      margin: 0
+      padding: 0 15px
+      font-family: 'gotham-m', sans-serif
+      .icon-arrow
+        margin: 0 0 0 13px
+        width: 10px
+        height: 4px
+        display: flex
+        align-items: center
+        justify-content: center
+        transform: rotate(180deg)
+        svg
+          width: 100%
+          height: 100%
+      &:after
+        display: none
+    .dropdown-menu__wrapper .modal-body
+      padding-left: 0
+      padding-right: 0
+    .menu-link
+      background: transparent
+      border: none
+      white-space: normal
+      padding: 13px 20px
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        border-bottom: 1px solid #EDEDED
+        width: calc(100% - 40px)
+        height: 1px
+        left: 20px
+        bottom: 0
+      &:hover
+        background: transparent
+      &:after
+        display: none
+    .drop-submenu
+      height: 100%
+      left: 100%
+      top: 0
+      z-index: 2
+      .dropdown-menu__wrapper .modal-body
+        padding: 40px 20px
+      .btn
+        color: #fff
+        justify-content: center
+      .box-image__wrapper
+        margin: 40px 0 0 auto
+      h3
+        margin: 0 0 20px
+      .menu-link
+        padding: 9px 0
+  .block-result
+    background: #FFFFFF
+    border: 1px solid #D9D9D9
+    box-sizing: border-box
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.136)
+    padding: 18px 20px 14px
+    display: flex
+    align-items: center
+    font-size: 15px
+    position: relative
+    .line
+      margin: 0 14px 0 12px
+    p
+      color: #0A2896
+      font-family: 'gotham-m', sans-serif
+
+
+.filter-box__dropdown
+  position: absolute
+  left: 0
+  top: 100%
+  z-index: 2
+  background: #fff
+  padding: 40px
+  min-width: 425px
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.05)
+  width: 425px
+  box-sizing: border-box
+  display: none
+  &:before
+    content: ''
+    position: absolute
+    width: 0
+    height: 0
+    border-left: 8px solid transparent
+    border-right: 8px solid transparent
+    border-bottom: 10px solid #fff
+    top: -10px
+    left: 20%
+  .btn
+    width: 100%
+    height: 40px
+    box-shadow: none
+
+.square-box
+  .filter-box__dropdown
+    left: auto
+    right: 0
+    &:before
+      left: auto
+      right: 20%
+
+.range_val
+  position: relative
+  margin: 0 0 25px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    margin: 0 auto
+    width: 20px
+    height: 1px
+    background: #eff1f0
+    top: 25px
+  input
+    width: 154px
+    height: 50px
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.136)
+    border: 1px solid #D9D9D9
+    background-color: #fff
+    padding: 0
+    text-align: center
+    color: #0A2896
+    cursor: pointer
+    font-size: 15px
+
+.slider-range
+  height: 5px
+  background: #E4E4E4
+  position: relative
+  width: 100%
+  margin: 0 0 34px
+
+.ui-state-default, .ui-slider-handle
+  width: 25px
+  height: 25px
+  box-sizing: border-box
+  background: #FFFFFF
+  border: 2px solid #0A2896
+    radius: 50%
+  display: inline-block
+  position: absolute
+  outline: none
+  top: -10px
+  cursor: pointer
+
+.ui-widget-header
+  background: #0A2896 !important
+  height: 5px !important
+  left: 0
+  position: absolute
+
+
+.deal-box
+  .dropdown
+    button
+      background: #fff
+      border: 1px solid #D9D9D9
+      color: #0A2896
+      .icon-arrow
+        svg
+          path
+            stroke: #0A2896
+
+
+
+.result-location
+  width: 100%
+  position: relative
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.05)
+  margin: 0 0 33px
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 57.29%, rgba(0, 0, 0, 0.2) 100%)
+    z-index: 2
+  .maps
+    width: 100%
+    position: absolute
+    left: 0
+    top: 0
+    height: 110px
+  h3
+    color: #0A2896
+    font-size: 28px
+    min-height: 108px
+    font-family: 'chocolates-b', sans-serif
+    position: relative
+    z-index: 2
+    display: flex
+    align-items: center
+  .all-object
+    position: absolute
+    left: 50%
+    bottom: -20px
+    z-index: 2
+    transform: translate(-50%,0)
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+    border-radius: 54px
+    width: 345px
+    height: 40px
+    justify-content: center
+    font-size: 17px
+    font-family: 'gotham-m', sans-serif
+    padding: 0
+    border: none
+    .icon
+      margin: 0 0 0 20px
+
+
+.filter-wrapper__result
+  padding: 16px 0 0
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  flex-wrap: wrap
+
+.btn-reset
+  border-radius: 53px
+  color: #0A2896
+  font-size: 15px
+  font-family: 'chocolates-r', sans-serif
+  padding: 5px 16px
+
+.list-result
+  display: flex
+  align-items: center
+  li
+    margin: 0 5px 0
+    a
+      display: flex
+      align-items: center
+      border: 1px solid #EDEDED
+        radius: 70px
+      background: #F7F7F7
+      padding: 5px 16px
+      box-sizing: border-box
+      .text
+        color: #0A2896
+        font-size: 15px
+        font-family: 'chocolates-r', sans-serif
+      .btn-del
+        width: 8px
+        height: 8px
+        margin: 0 0 0 7px
+        display: flex
+        align-items: center
+        justify-content: center
+        svg
+          width: 100%
+          height: 100%
+
+.filter-wrapper
+  margin: 0 0 30px
+
+.filter-wrapper__top
+  width: 100%
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: flex-end
+  position: relative
+  h6
+    font-size: 18px
+    color: #1A1A1A
+    font-family: 'chocolates-r', sans-serif
+    margin: 0 0 4px
+    width: 100%
+  .block-search .form-search
+    width: 184px
+
+.more-options
+  width: 169px
+  height: 50px
+  font-size: 15px
+  box-shadow: none
+  font-family: 'gotham-m', sans-serif
+
+
+.list-room
+  display: flex
+  align-items: center
+  li
+    margin: 0 -1px 0 0
+    a
+      width: 50px
+      height: 50px
+      display: flex
+      align-items: center
+      justify-content: center
+      border: 1px solid #D9D9D9
+      box-sizing: border-box
+      font-size: 15px
+      font-family: 'gotham-m', sans-serif
+    .other-box
+      height: 50px
+      width: 90px
+    .active
+      background: linear-gradient(0deg, #E6F2FD, #E6F2FD), linear-gradient(0deg, #CFCEE9, #CFCEE9), #3A9AF3
+      color: #0A2896
+
+
+//sorting-wrapper
+.sorting-wrapper
+  width: 100%
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: center
+  margin: 0 0 44px
+  font-size: 18px
+  font-family: 'chocolates-r', sans-serif
+  h6
+    margin: 0 20px 0 0
+
+
+.list-sort
+  display: flex
+  align-items: center
+  li
+    margin: 0 25px 0 0
+    &:last-child
+      margin: 0
+    a
+      font-size: 18px
+      color: #1A1A1A
+    .active
+      text-decoration: underline
+      color: #0A2896
+
+.list-views
+  display: flex
+  align-items: center
+  li
+    &:nth-child(2)
+      a
+        svg
+          rect
+            fill: #1A1A1A
+    &:nth-child(1)
+      a
+        svg
+          rect
+            stroke: #1A1A1A
+    a
+      width: 40px
+      height: 41px
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1)
+      background: #fff
+      display: flex
+      align-items: center
+      justify-content: center
+
+    a.active
+      box-shadow: none
+      background: #0A2896
+      svg
+        rect
+          fill: transparent
+          stroke: #fff
+
+.sorting-box-left
+  margin: 0 auto 0 0
+
+.page-listing
+  margin: 0 60px
+  .btn-arrow
+    width: 14px
+    height: 10px
+    display: flex
+    align-items: center
+    svg
+      width: 100%
+      height: 100%
+  h6
+    margin: 0 5px 0 17px
+  .question-wrap
+    margin: 0 22px 0 0
+    display: flex
+    align-items: center
+    .current
+      color: #0A2896
+      font-family: 'chocolates-b', sans-serif
+    .line
+      margin: 0 5px
+
+
+.sorting-box
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+.sort
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+
+.mix-btn
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 22px
+  height: 14px
+  margin: 0 12px 0 0
+  svg
+    width: 100%
+    height: 100%
+
+
+
+//pagination
+.nav-pagination
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.page-item-further.page-item
+  margin: 0 0 0 10px
+  .page-link
+    width: 110px
+    height: 50px
+
+.page-item.active .page-link
+  background: #0A2896
+  border-color: #0A2896
+
+.page-item
+  margin: 0 -1px 0 0
+
+.page-item:first-child .page-link, .page-item:last-child .page-link
+  border-radius: 0
+
+.page-link
+  width: 50px
+  height: 50px
+  padding: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  border: 1px solid #D9D9D9
+  font-size: 15px
+  color: #1A1A1A
+  font-family: 'gotham-m', sans-serif
+  &:focus
+    outline: none
+    box-shadow: none
+  &:hover
+    color: #1a1a1a
+    background: #D9D9D9
+
+
+//banner-callback
+.banner-callback
+  margin: 38px 0 51px
+
+.banner-callback__wrapper
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex-wrap: wrap
+  border: 2px solid #EDEDED
+  background: #FFFFFF
+  box-sizing: border-box
+  font-family: 'chocolates-r', sans-serif
+  overflow: hidden
+  position: relative
+  padding: 33px 170px 29px 59px
+  .banner-text
+    margin: 0 28px 0 0
+    display: flex
+    align-items: center
+
+  h3
+    font-size: 26px
+    color: #000
+    font-family: 'chocolates-b', sans-serif
+    max-width: 261px
+    width: 261px
+    margin: 0 77px 0 0
+  p
+    color: #1A1A1A
+    font-size: 21px
+    line-height: 22px
+    max-width: 537px
+  .image
+    position: absolute
+    right: -124px
+    top: -58px
+    margin: 0 0 0 auto
+    border-radius: 50%
+    width: 302px
+    height: 302px
+    overflow: hidden
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    background: linear-gradient(0deg, #E6F2FD, #E6F2FD), linear-gradient(0deg, #CFCEE9, #CFCEE9), #3A9AF3
+    img
+      position: absolute
+      left: 0
+      bottom: 115px
+  .btn
+    border-radius: 10px
+    box-shadow: none
+    align-items: center
+    justify-content: center
+    width: 281px
+    height: 63px
+    font-family: 'gotham-m', sans-serif
+    &:hover
+      .icon
+        svg
+          circle, path
+            stroke: #fff
+    .icon
+      margin: 0 15px 0 0
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 16px
+      height: 16px
+
 
 
 @import "media"
