@@ -108,9 +108,17 @@ $(document).ready(function() {
                 }
             },
             {
+                breakpoint: 740,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
                 breakpoint: 575,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false
                 }
             }
         ]
@@ -123,7 +131,17 @@ $(document).ready(function() {
         prevArrow: '<button type="button" class="slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-next"></button>',
         asNavFor: '.object-photo-min',
-        infinite: true
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false
+                }
+            }
+        ]
     });
 
     $('.object-photo-min').slick({
@@ -131,7 +149,45 @@ $(document).ready(function() {
         prevArrow: '<button type="button" class="slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-next"></button>',
         asNavFor: '.object-photo-max',
-        infinite: true
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 1390,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 1296,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 970,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 730,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 620,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     // var srcValue = $('.product-image__max img').attr('src');

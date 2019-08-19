@@ -392,6 +392,23 @@
       width: 256px
       overflow: hidden
 
+@media only screen and (max-width : 1390px)
+  .quantity-favorites
+    width: 300px
+
+  .object-photo-min
+    width: 360px
+
+  .detail-price li
+    font-size: 18px
+
+  .detail-price li p
+    min-width: 120px
+
+  .detail-price li:last-child span
+    min-width: 133px
+
+
 @media only screen and (max-width : 1370px)
   .container
     max-width: 1296px
@@ -847,7 +864,7 @@
       margin: 0 0 15px
 
   .manager-box .btn-callback
-    width: 233px
+    width: 90%
 
   .detail-price li
     font-size: 16px
@@ -855,6 +872,99 @@
   .detail-price li p
     min-width: 115px
 
+  .object-photo-min
+    width: 240px
+
+  .add-favorites
+    margin: 0 0 20px 0
+
+  .quantity-favorites
+    width: 100%
+    &:before
+      left: 30px
+      top: -11px
+      transform: translate(0) rotate(135deg)
+
+  .detail-price li
+    font-size: 14px
+    .line
+      display: none
+    p, span
+      min-width: auto
+    span
+      margin: 0 0 0 auto
+    .icon
+      margin: 0 5px 0 0
+
+  .manager-box .phone
+    font-size: 30px
+
+  .object-apartments
+    h2
+      font-family: 'chocolates-r', sans-serif
+      font-size: 35px
+
+  .line-date
+    font-size: 16px
+    margin: 0 0 25px
+    .date
+      padding: 0 20px 0 0
+      margin: 0 20px 0 0
+
+  .cost-wrapper
+    height: 48px
+    flex-direction: row
+    align-items: center
+    .new-price
+      margin: 0 28px 0 0
+
+  .line-favorites
+    justify-content: space-between
+    margin: 0 0 30px
+    .btn-track
+      width: 294px
+
+  .detail-price
+    margin: 0 0 30px
+    li
+      font-size: 20px
+      margin: 0 0 25px
+      p
+        min-width: 144px
+      span
+       min-width: 94px
+      .line
+        display: flex
+      &:last-child
+        margin: 0
+        span
+          min-width: 144px
+
+  .manager-box h3
+    margin: 16px auto
+
+  .manager-box .btn-callback
+    width: 233px
+
+
+  .object-location .maps
+    height: 423px
+
+  .object-photo-max .slide
+    height: 403px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+
+  .object-photo-min
+    width: 426px
+
+  .list-characteristics
+    margin: 42px 0 0
+
+  .object-description
+    margin: 57px 0 0
 
 @media only screen and (max-width : 1199px)
   main
@@ -896,6 +1006,10 @@
         order: -2
     .object-subscribe
       order: -1
+      
+  .object-apartments
+    .subtitle
+      text-align: left
 
 @media only screen and (max-width : 1180px)
   .top-banner
@@ -1105,6 +1219,36 @@
         width: 484px
         bottom: 34%
 
+  .object-photo-max .slide
+    height: auto
+
+  .object-photo-line
+    margin: 33px 0 0
+
+  .popup-video
+    width: 80px
+    min-width: 80px
+    height: 64px
+    .icon-play
+      width: 27px
+      height: 27px
+      display: flex
+      align-items: center
+      justify-content: center
+      svg
+        width: 100%
+        height: 100%
+
+  .min-preview
+    width: 82px
+    height: 65px
+
+  .object-photo-min
+    width: 370px
+
+  .list-characteristics
+    margin: 50px 0 0 0
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 987px)
   .filter-box.area-box .dropdown button
@@ -1182,6 +1326,35 @@
     .text
       width: 307px
 
+  .object-photo-min
+    width: 315px
+
+  .object-description
+    font-size: 20px
+    margin: 40px 0 0 0
+
+  .detail-price li
+    font-size: 18px
+
+  .box-option
+    width: auto
+    font-size: 16px
+    .icon
+      width: 65px
+      height: 65px
+      padding: 12px
+      margin: 0 0 11px
+      border-width: 2.5px
+
+  .object-location .maps
+    height: 312px
+
+  .object-location .address
+    margin: 17px 0 20px
+
+  .similar-properties h2
+    font-size: 45px
+
 @media only screen and (max-width : 900px)
   .stages-business h2
     font-size: 32px
@@ -1204,6 +1377,22 @@
 
   .copyright span
     max-width: none
+
+  .line-favorites .btn-track
+    width: 211px
+
+  .add-favorites
+    width: 60px
+
+  .cost-wrapper
+    flex-direction: column
+    align-items: center
+    height: 70px
+    .new-price
+      margin: 0
+
+  .line-date
+    font-size: 15px
 
 @media only screen and (max-width : 800px)
   .services
@@ -1542,6 +1731,23 @@
   .advanced-filter .list-room li a
     padding: 0
 
+  .line-date
+    font-size: 16px
+    .date
+      margin: 0 25px 0 0
+      padding: 0 26px 0 0
+
+  .min-preview
+    width: 81px
+    height: 64px
+
+  .list-characteristics li p, .list-characteristics li span
+    min-width: auto
+    white-space: nowrap
+
+  .object-photo-min
+    width: 260px
+
 
 @media only screen and (max-width : 750px)
   .banner-callback__wrapper .image
@@ -1666,6 +1872,9 @@
 
   .advanced-filter .filter-wrapper .deal-box .list-room li a
     padding: 13px 14px
+
+  .object-photo-min
+    width: calc(100% - 100px)
 
 @media only screen and (max-width : 690px)
   .links-sale
@@ -1836,6 +2045,10 @@
   .button-wrapper .btn-view
     width: 290px
 
+  .detail-price li p, .detail-price li span, .detail-price li:last-child span
+    min-width: auto
+    white-space: nowrap
+
 @media only screen and (max-width : 620px)
   .header-center__content .block-search
     .form-search
@@ -1893,6 +2106,22 @@
 
   .advanced-filter .filter-box
     width: 100%
+
+  .object-location
+    margin: 40px 0 0 0
+    padding: 0
+    h3, .address
+      padding: 0 15px
+    .address
+      margin: 17px 0 15px
+    .maps
+      height: 139px
+
+  .similar-properties h2
+    font-size: 35px
+    margin: 0 0 22px
+
+
 
 @media only screen and (max-width : 575px)
   .header-bottom__content
@@ -2178,6 +2407,107 @@
   .advanced-filter .line-title h3
     max-width: 207px
     line-height: 21px
+
+  .similar-properties__slider
+    padding: 0
+
+  .object-apartments h2
+    font-size: 25px
+
+  .object-photo-line
+    display: none
+
+  .object-photo-max .slide .icon-zoom
+    display: none
+
+  .line-favorites
+    justify-content: center
+
+  .add-favorites
+    margin: 0 10px 20px 0
+
+  .object-apartments
+    .slick-dots
+      margin: 30px 0 0 0
+      position: relative
+      bottom: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      li.slick-active
+        background: #0A2896
+        width: 15px
+        height: 15px
+      li
+        width: 10px
+        height: 10px
+        margin: 0 7.5px
+        border-radius: 50%
+        background: #EDEDED
+        button
+          display: none
+
+
+  .list-characteristics
+    margin: 0
+
+  .line-date
+    justify-content: center
+    margin: 0 0 23px
+
+  .cost-wrapper
+    margin: 0 0 16px
+
+  .quantity-favorites
+    width: 282px
+
+  .detail-price li .icon
+    margin: 0 9px 0 0
+
+  .box-option .icon
+    width: 66px
+    height: 66px
+    margin: 0 0 43px
+
+  .object-description
+    margin: 39px 0 0
+
+  .share-box
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    p
+      margin: 0 0 10px
+
+  .object-location .address .icon
+    min-width: 12px
+
+  .object-location .address
+    align-items: flex-start
+
+  .similar-properties
+    margin: 25px 0 0 0
+    .slick-dots
+      margin: 30px 0 0 0
+      position: relative
+      bottom: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      li.slick-active
+        background: #0A2896
+        width: 15px
+        height: 15px
+      li
+        width: 10px
+        height: 10px
+        margin: 0 7.5px
+        border-radius: 50%
+        background: #EDEDED
+        button
+          display: none
+    .object-box
+      margin: 0
 
 @media only screen and (max-width : 520px)
   .header-top .box-schedule
