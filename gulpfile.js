@@ -44,7 +44,8 @@ gulp.task('libs-css', ['sass'], function(){
 });
 gulp.task('libs-js', function(){
   return gulp.src([
-    'app/libs/slick/slick.min.js'
+    'app/libs/slick/slick.min.js',
+    'app/libs/fancybox/jquery.fancybox.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

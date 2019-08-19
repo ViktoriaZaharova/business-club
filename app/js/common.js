@@ -60,7 +60,7 @@ $(document).ready(function() {
     $('.slider-range').slider({
         range: true,
         min: 0,
-        max: 12500,
+        max: 1250000,
         values: [ 0, 0 ],
         classes: {
             "ui-slider-handle": "ui-corner-all"
@@ -83,5 +83,70 @@ $(document).ready(function() {
         arrows: false
         // autoplay: true,
         // autoplaySpeed: 2000
+    });
+
+    $('.more-options').click(function (e) {
+        e.preventDefault();
+        $('.advanced-filter').fadeIn();
+    });
+
+    $('.advanced-filter .btn-close').click(function (e) {
+        e.preventDefault();
+        $('.advanced-filter').fadeOut();
+    });
+
+    $('.similar-properties__slider').slick({
+        slidesToShow: 4,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 1296,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    $('[data-fancybox="images"], .popup-video').fancybox();
+
+    $('.object-photo-max').slick({
+        slidesToShow: 1,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        asNavFor: '.object-photo-min',
+        infinite: true
+    });
+
+    $('.object-photo-min').slick({
+        slidesToShow: 4,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        asNavFor: '.object-photo-max',
+        infinite: true
+    });
+
+    // var srcValue = $('.product-image__max img').attr('src');
+    var penImg = $('.object-photo-max .popup-img img');
+    var linksImg = $('.object-photo-max .popup-img');
+
+    $('.object-photo-min div.min-preview').on('click', function () {
+        $('.object-photo-min div.min-preview').removeClass('click-item');
+        $(this).addClass('click-item');
+        var imgPath;
+
+        imgPath = $(this).attr('data-img-path');
+
+        penImg.attr('src', imgPath);
+        linksImg.attr('href', imgPath);
+
     });
 });

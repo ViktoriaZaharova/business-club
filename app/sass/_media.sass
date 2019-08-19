@@ -342,6 +342,56 @@
     left: 50%
     transform: translate(-50%,-50%)
 
+  .banner-callback__wrapper
+    padding: 32px 170px 15px 50px
+    .banner-text
+      flex-direction: column
+      align-items: flex-start
+      max-width: 662px
+      margin: 0 31px 0 0
+      .description
+        max-width: none
+        font-size: 18px
+    h3
+      font-size: 22px
+      margin: 0 0 10px
+      max-width: none
+      width: auto
+
+  .result-location .all-object
+    font-size: 16px
+
+  .object-box .text
+    padding: 29px 40px 19px
+
+  .advanced-filter
+    input
+      width: 130px
+    .rooms-box
+      .list-room
+        flex-wrap: wrap
+        max-width: 240px
+        li
+          margin: 0 20px 20px 0
+          &:nth-child(4)
+            margin: 0 0 20px
+          &:last-child
+            margin: 0 0 20px
+
+
+  .material-box .dropdown button
+    width: 294px
+
+  .advanced-filter .line-title
+    margin: 25px 0 29px
+
+  .advanced-filter .filter-wrapper .area-box .dropdown button
+    width: 294px
+    position: relative
+    .text
+      width: 256px
+      overflow: hidden
+
 @media only screen and (max-width : 1370px)
   .container
     max-width: 1296px
@@ -422,6 +472,18 @@
     .pretext
       margin: 27px auto 0
 
+  .filter-box .block-result
+    padding: 12px 15px 14px
+    font-size: 14px
+
+  .filter-box.area-box .dropdown button, .more-options
+    height: 45px
+
+  .btn-subscribe
+    font-size: 16px
+
+  .object-subscribe .title h3
+    font-size: 22px
 
 @media only screen and (max-width : 1300px)
   .top-banner__title
@@ -674,6 +736,126 @@
     font-size: 26px
     line-height: normal
 
+  .deal-box
+    .list-room
+      display: flex
+    .dropdown
+      display: none
+
+  .filter-box, .more-options
+    margin: 0 0 14px
+
+  .list-room li a, .list-room li .other-box
+    height: auto
+    width: auto
+    padding: 13px 26px
+
+  .property-box .dropdown button
+    height: 45px
+    width: 206px
+    justify-content: space-between
+    padding: 0 19px
+
+  .list-result
+    li
+      margin: 0 5px 10px 0
+
+  .filter-wrapper__result
+    padding: 4px 0 0
+
+  .filter-box.area-box
+    .dropdown
+      button
+        width: 385px
+
+
+  .list-sort li
+    margin: 0 15px 0 0
+    &:last-child
+      margin: 0
+
+  .sorting-wrapper h6
+    margin: 0 17px 0 0
+
+  .sorting-box-center
+    position: relative
+    padding: 0 20px
+    border:
+      left: 2px solid #EDEDED
+      right: 2px solid #EDEDED
+
+  .page-listing
+    margin: 0
+    h6
+      margin: 0 5px 0 10px
+
+  .sorting-box-left
+    margin: 0
+
+  .banner-callback__wrapper
+    align-items: flex-start
+    .banner-text
+      max-width: 366px
+    .btn
+      width: 246px
+      height: 79px
+      padding: 24px 18px 0 33px
+      align-items: flex-start
+      .text
+        text-align: left
+        font-size: 16px
+        line-height: 17px
+    .image
+      width: 451px
+      height: 451px
+      right: -178px
+      img
+        width: 286px
+        bottom: 190px
+
+  .advanced-filter .filter-wrapper .area-box .dropdown button
+    width: 306px
+    .text
+      width: 268px
+
+  .advanced-filter .rooms-box .list-room
+    max-width: none
+
+  .advanced-filter .rooms-box .list-room li:nth-child(4), .advanced-filter .rooms-box .list-room li
+    margin: 0 10px 0 0
+
+  .advanced-filter .rooms-box .list-room li:last-child
+    margin: 0
+
+  .advanced-filter input
+    width: 135px
+
+  .advanced-filter .filter-wrapper .deal-box .list-room li a
+    padding: 13px 18px
+
+  .advanced-filter .filter-box
+    margin: 0 0 20px
+
+  .material-box .dropdown button
+    width: 307px
+
+  .box-option
+    width: 93px
+    .icon
+      height: 93px
+      padding: 17px
+      margin: 0 0 15px
+
+  .manager-box .btn-callback
+    width: 233px
+
+  .detail-price li
+    font-size: 16px
+
+  .detail-price li p
+    min-width: 115px
+
+
 @media only screen and (max-width : 1199px)
   main
     h1
@@ -708,7 +890,12 @@
       a
         margin: 0 20px 0 0
 
-
+  .project-search-result
+    .col-12
+      &:first-child, &:nth-child(2), &:nth-child(3)
+        order: -2
+    .object-subscribe
+      order: -1
 
 @media only screen and (max-width : 1180px)
   .top-banner
@@ -716,7 +903,7 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
+@media only screen and (max-width : 991px)
   .header-top .block-advantages, .btn-help, .header-center__content .btn-sell
     display: none
 
@@ -864,7 +1051,95 @@
   .contacts-section__box-wrapper
     margin: 0 0 30px
 
+  .project-search-result .col-12:nth-child(3)
+    order: inherit
+
+  .list-sort
+    display: none
+
+  .sort .dropdown
+    display: block
+
+  .sorting-box-center
+    border: none
+    padding: 0
+    margin: 0 30px 0 auto
+
+  .sorting-wrapper h6
+    margin: 0 13px 0 0
+    font-size: 18px
+
+  .page-listing
+    display: none
+
+  .banner-callback__wrapper
+    flex-direction: column
+    align-items: flex-start
+    padding: 36px 170px 36px 46px
+    .banner-text
+      margin: 0
+      max-width: 318px
+      p
+        font-size: 16px
+        display: block
+        margin: 0 0 10px
+        line-height: 19px
+        &:last-child
+          margin: 0
+    h3
+      max-width: 226px
+      margin: 0 0 22px
+    .btn
+      width: 296px
+      height: 63px
+      padding: 0
+      justify-content: center
+      align-items: center
+      margin: 31px 0 0 0
+    .image
+      width: 793px
+      height: 793px
+      right: -60%
+      top: -152px
+      img
+        width: 484px
+        bottom: 34%
+
 /* Small Devices, Tablets */
+@media only screen and (max-width : 987px)
+  .filter-box.area-box .dropdown button
+    width: 132px
+
+  .property-box
+    display: none
+
+  .list-room li a, .list-room li .other-box
+    padding: 10px 24px
+
+  .deal-box .list-room li a, .area-box .list-room li a
+    padding: 10px 31px
+
+  .filter-box.area-box .dropdown button, .more-options
+    height: 40px
+
+  .filter-box .block-result
+    padding: 11px 15px
+
+  .filter-box .dropdown button
+    font-size: 14px
+    .icon-arrow
+      margin: 0
+
+  .btn-reset
+    width: 140px
+    min-width: 140px
+    margin: 0 0 10px
+
+  .filter-wrapper__result
+    overflow-x: scroll
+    width: 100%
+    flex-wrap: nowrap
+
 @media only screen and (max-width : 970px)
   .box-share
     .image
@@ -890,7 +1165,22 @@
   .footer-center__wrapper
     align-items: flex-start
 
+  .advanced-filter .filter-wrapper .deal-box .list-room li a
+    padding: 13px 26px
 
+  .advanced-filter input
+    width: 153px
+
+  .material-box .dropdown button
+    width: 344px
+
+  .button-wrapper
+    margin: 0 0 0 auto
+
+  .advanced-filter .filter-wrapper .area-box .dropdown button
+    width: 345px
+    .text
+      width: 307px
 
 @media only screen and (max-width : 900px)
   .stages-business h2
@@ -1083,7 +1373,26 @@
   footer .box-schedule
     margin: 0 0 37px
 
-@media only screen and (max-width : 768px)
+  .result-location .all-object
+    font-size: 16px
+    position: relative
+    margin: 35px 0
+    bottom: 0
+    left: 0
+    transform: translate(0)
+    display: inline-flex
+    float: right
+
+
+  .result-location h3
+    width: auto
+    height: auto
+    min-height: auto
+    display: inline
+    float: left
+    margin: 35px 0
+
+@media only screen and (max-width : 767px)
   .btn-phone
     width: 50px
     height: 50px
@@ -1199,6 +1508,47 @@
     margin: 0 21.5px 75px
 
 
+  .deal-box .dropdown, .rooms-box .dropdown
+    display: block
+    button
+      width: 132px
+      justify-content: space-between
+
+  .deal-box .list-room, .rooms-box .list-room
+    display: none
+
+  .filter-box .dropdown button
+    height: 40px
+    font-size: 13px
+
+  .filter-box .block-result
+    font-size: 13px
+
+  .filter-box__dropdown
+    width: 355px
+    min-width: 355px
+    padding: 25px
+
+
+  .range_val input
+    width: 125px
+
+  .advanced-filter .rooms-box .list-room
+    display: flex
+
+  .advanced-filter input
+    width: 153px
+
+  .advanced-filter .list-room li a
+    padding: 0
+
+
+@media only screen and (max-width : 750px)
+  .banner-callback__wrapper .image
+    right: -700px
+
+  .banner-callback__wrapper .btn .text
+    white-space: nowrap
 
 @media only screen and (max-width : 730px)
   .header-center__content .block-search .form-search
@@ -1298,6 +1648,24 @@
 
   .reviews__content-wrapper:after, .reviews__content-wrapper:before
     display: none
+
+  //.advanced-filter .filter-box
+  //  width: 100%
+
+  .advanced-filter input
+    width: 124px
+
+  .material-box .dropdown button, .advanced-filter .filter-wrapper .area-box .dropdown button
+    width: 280px
+
+  .advanced-filter .filter-wrapper .area-box .dropdown button .text
+    width: 242px
+
+  .advanced-filter .slider-range
+    margin: 0
+
+  .advanced-filter .filter-wrapper .deal-box .list-room li a
+    padding: 13px 14px
 
 @media only screen and (max-width : 690px)
   .links-sale
@@ -1424,6 +1792,50 @@
     padding: 0
     margin: 0 0 27px
 
+  .filter-box__dropdown
+    width: 100%
+    min-width: 100%
+
+  .range_val
+    .line
+      display: none
+    input
+      width: 100%
+      margin: 0 0 20px
+      &:last-child
+        margin: 0
+
+  .result-location h3
+    font-size: 24px
+    width: 100%
+    display: block
+    margin: 25px auto 36px
+    text-align: center
+
+  .result-location
+    margin: 0 auto 40px
+    .all-object
+      margin: 0
+      position: absolute
+      left: 50%
+      transform: translate(-50%,0)
+      bottom: -20px
+      font-size: 13px
+      width: 281px
+      height: 40px
+
+  .advanced-filter
+    .range_val
+      display: flex
+      .line
+        display: flex
+      input
+        width: 124px
+        margin: 0
+
+  .button-wrapper .btn-view
+    width: 290px
+
 @media only screen and (max-width : 620px)
   .header-center__content .block-search
     .form-search
@@ -1478,6 +1890,9 @@
     p
       font-size: 12px
       margin: 0 0 15px
+
+  .advanced-filter .filter-box
+    width: 100%
 
 @media only screen and (max-width : 575px)
   .header-bottom__content
@@ -1661,6 +2076,108 @@
 
   .contacts-section__box-wrapper .start-work
     margin: 0 0 20px
+
+  .object-subscribe
+    display: none
+
+  .mix-btn
+    background: linear-gradient(0deg, #E6F2FD, #E6F2FD), linear-gradient(0deg, #CFCEE9, #CFCEE9), #3A9AF3
+    width: 174px
+    height: 41px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #0A2896
+    font-size: 13px
+    font-family: 'gotham-m', sans-serif
+    margin: 0
+    svg
+      width: 22px
+      height: 14px
+    .text
+      display: block
+      margin: 0 0 0 10px
+
+  .sorting-wrapper
+    margin: 0 0 36px
+
+  .price-wrapper
+    flex-direction: column
+    align-items: flex-start
+    .new-price
+      margin: 0 0 5px 0
+
+  .banner-callback__wrapper .btn
+    width: 180px
+    height: 50px
+    flex-wrap: nowrap
+    overflow: hidden
+    justify-content: flex-start
+    padding: 0 20px
+
+  .banner-callback__wrapper
+    padding: 30px 20px
+    border: none
+    box-shadow: 0px 2.63973px 7.25926px rgba(0, 0, 0, 0.088), 0px 4px 11px rgba(0, 0, 0, 0.088)
+    .banner-text
+      .description
+        max-width: 190px
+
+  .banner-callback
+    margin: 13px 0 40px
+    .container
+      padding: 0
+
+  .pagination
+    width: 100%
+    justify-content: center
+
+  .page-link-end
+    margin: 10px 12px 0 0
+
+  .page-link-end, .page-link-further
+    order: 1
+    width: 134px
+    display: flex
+
+  .page-link-further
+    margin: 10px 0 0
+
+  .button-wrapper .btn-view
+    width: 135px
+
+  .button-wrapper .btn-reset
+    width: 137px
+    justify-content: center
+    .icon
+      display: none
+
+
+  .advanced-filter .rooms-box .list-room
+    max-width: 210px
+    li
+      margin: 0 10px 10px 0
+
+  .advanced-filter .rooms-box .list-room li:nth-child(4)
+    margin: 0 0 10px 0
+
+  .advanced-filter .filter-box .range_val
+    width: 280px
+
+  .advanced-filter
+    .slider-range
+      width: 280px
+    .filter-box .block-result .line
+      margin: 0 10px
+
+  .button-wrapper
+    margin: 0
+    justify-content: center
+    width: 100%
+
+  .advanced-filter .line-title h3
+    max-width: 207px
+    line-height: 21px
 
 @media only screen and (max-width : 520px)
   .header-top .box-schedule
@@ -1859,6 +2376,19 @@
   .employees-profile__license .slide
     width: 90%
 
+  .filter-box.price-box
+    width: 100%
+    .block-result
+      width: 100%
+
+  .more-options
+    width: 100%
+
+  .filter-box .block-result
+    width: 132px
+
+  .dropdown-menu__wrapper .modal-body
+    padding: 20px
 
 @media only screen and (max-width : 320px)
 	/**/
